@@ -1,0 +1,17 @@
+Учительская 2.0 — сайт-доска из 7 столбцов
+
+Файлы:
+1. index.html — структура сайта
+2. styles.css — оформление как на макете
+3. script.js — поиск, подсказки, мини-диагностика
+
+Как запустить:
+Откройте index.html в браузере.
+
+Как загрузить на GitHub Pages:
+1. Создайте репозиторий.
+2. Загрузите index.html, styles.css, script.js.
+3. Откройте Settings → Pages.
+4. Source: Deploy from a branch.
+5. Branch: main, folder: /root.
+6. Сохраните и дождитесь ссылки.
