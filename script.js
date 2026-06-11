@@ -2,7 +2,7 @@ const menuBtn = document.querySelector('#menuBtn');
 const searchInput = document.querySelector('#boardSearch');
 const clearSearch = document.querySelector('#clearSearch');
 const cards = Array.from(document.querySelectorAll('.card'));
-const infoBox = document.querySelector('#infoBox');
+const infoBox = document.querySelector('#help');
 const diagnosticBtn = document.querySelector('#diagnosticBtn');
 const quizModal = document.querySelector('#quizModal');
 const quizForm = document.querySelector('#quizForm');
@@ -35,7 +35,11 @@ function setActiveCard(card) {
 
 cards.forEach(card => {
   card.addEventListener('click', event => {
-    if (card.tagName === 'A') {
+    const isAnchor = card.tagName === 'A';
+    const href = card.getAttribute('href') || '';
+    const isPlaceholderLink = isAnchor && (!href || href === '#');
+
+    if (isPlaceholderLink) {
       event.preventDefault();
     }
 
@@ -51,8 +55,23 @@ cards.forEach(card => {
       showInfo(title, recommendations[role], icon);
       highlightByRole(role);
     }
+
+    if (isAnchor && href.startsWith('#') && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
+        history.pushState(null, '', href);
+        flashTarget(target);
+      }
+    }
   });
 });
+
+function flashTarget(target) {
+  target.classList.add('is-targeted');
+  setTimeout(() => target.classList.remove('is-targeted'), 1400);
+}
 
 function highlightByRole(role) {
   cards.forEach(card => {

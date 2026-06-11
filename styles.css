@@ -492,6 +492,24 @@ button {
   display: none;
 }
 
+
+.card--link::after {
+  content: "›";
+  margin-left: auto;
+  color: #176ee5;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.column.is-targeted,
+.search-panel.is-targeted,
+.info-box.is-targeted,
+.bottom-zone.is-targeted {
+  outline: 4px solid rgba(47, 125, 245, .24);
+  outline-offset: 4px;
+}
+
 .card__icon {
   flex: 0 0 auto;
   width: 38px;

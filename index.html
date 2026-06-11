@@ -100,34 +100,34 @@
         </section>
 
         <section class="kanban" aria-label="Доска проекта из семи столбцов">
-          <article class="column column--blue" data-column="welcome">
+          <article class="column column--blue" data-column="welcome" id="welcome">
             <div class="column__header">
               <span class="column__number">1</span>
               <h2>Вход в учительскую</h2>
             </div>
-            <button class="card" type="button" data-info="Добро пожаловать! Это стартовая зона проекта: выберите задачу и двигайтесь по доске слева направо.">
+            <a class="card card--link" href="#diagnostic" data-info="Стартовая ссылка: можно сразу пройти мини-диагностику и понять, какой наставник нужен.">
               <span class="card__icon">🚪</span>
               <b>Добро пожаловать!</b>
-            </button>
-            <button class="card" type="button" data-info="Доска работает как маршрут: проблема → наставник → материал → готовый образовательный продукт.">
+            </a>
+            <a class="card card--link" href="#help" data-info="Краткая инструкция: двигайтесь по доске слева направо — проблема → наставник → материал → готовый образовательный продукт.">
               <span class="card__icon">📘</span>
               <b>Как пользоваться доской</b>
-            </button>
-            <button class="card" type="button" data-info="Шаг 1: сформулируйте свою главную педагогическую задачу.">
+            </a>
+            <a class="card card--link" href="#problems" data-info="Переход к столбцу 2: выберите главную задачу или проблему.">
               <span class="card__icon">🖱</span>
               <b>1. Выбери задачу</b>
-            </button>
-            <button class="card" type="button" data-info="Шаг 2: найдите учителя с подходящей суперсилой.">
+            </a>
+            <a class="card card--link" href="#teachers" data-info="Переход к столбцу 3: найдите учителя с подходящей суперсилой.">
               <span class="card__icon">👥</span>
               <b>2. Найди наставника</b>
-            </button>
-            <button class="card" type="button" data-info="Шаг 3: получите помощь, материал или пакет сопровождения.">
+            </a>
+            <a class="card card--link" href="#materials" data-info="Переход к бесплатной полке: выберите шаблон, чек-лист, промпты или памятку.">
               <span class="card__icon">🤝</span>
               <b>3. Получи помощь</b>
-            </button>
+            </a>
           </article>
 
-          <article class="column column--purple" data-column="problems">
+          <article class="column column--purple" data-column="problems" id="problems">
             <div class="column__header">
               <span class="column__number">2</span>
               <h2>Что у вас болит?</h2>
@@ -154,7 +154,7 @@
             </button>
           </article>
 
-          <article class="column column--green" data-column="teachers">
+          <article class="column column--green" data-column="teachers" id="teachers">
             <div class="column__header">
               <span class="column__number">3</span>
               <h2>Карта суперсил учителей</h2>
@@ -212,7 +212,7 @@
             </a>
           </article>
 
-          <article class="column column--orange" data-column="market">
+          <article class="column column--orange" data-column="market" id="market">
             <div class="column__header">
               <span class="column__number">5</span>
               <h2>Педагогический маркет</h2>
@@ -239,7 +239,7 @@
             </button>
           </article>
 
-          <article class="column column--red" data-column="projects">
+          <article class="column column--red" data-column="projects" id="projects">
             <div class="column__header">
               <span class="column__number">6</span>
               <h2>Социокультурные проекты</h2>
@@ -262,7 +262,7 @@
             </button>
           </article>
 
-          <article class="column column--gold" data-column="results">
+          <article class="column column--gold" data-column="results" id="results">
             <div class="column__header">
               <span class="column__number">7</span>
               <h2>Зал славы и результаты</h2>
@@ -291,7 +291,7 @@
         </section>
 
         <section class="bottom-zone" id="diagnostic">
-          <article class="info-box" id="infoBox" aria-live="polite">
+          <article class="info-box" id="help" aria-live="polite">
             <span class="info-box__icon">💡</span>
             <div>
               <h2>Нажмите на любую карточку</h2>
